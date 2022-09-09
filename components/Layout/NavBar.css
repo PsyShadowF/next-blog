@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.NavBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  background-color: black;
+}
+
+.logo {
+  filter: invert();
+  padding: 10px;
+}
+
+.list--ul {
+  margin: auto 0 auto auto;
+  list-style: none;
+}
+
+.list--li {
+  display: inline-block;
+}
+
+.list--li a {
+  color: white;
+  padding: 0 15px;
+  transition: all 0.6s ease 0s;
+  text-decoration: none;
+}
+
+.list--li a:hover {
+  transition: all 0.6s ease 0s;
+  color: lightgray;
+}
