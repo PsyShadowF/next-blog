@@ -1,7 +1,17 @@
-import data from "../data.json";
+import PostItem from "./PostItem";
 
-function PostList() {
+function PostList(props) {
   return (
-    <></>
+    props.data.map(item => {
+      return <PostItem
+        key={item.id}
+        id={item.id}
+        image={item.image}
+        title={item.title}
+        body={item.body}
+      />
+    })
   )
 }
+
+export default PostList

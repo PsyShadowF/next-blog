@@ -1,7 +1,19 @@
-function Posts() {
+import data from "../../components/data.json";
+import PostList from "../../components/Posts/PostList"
+
+function Posts(props) {
   return(
-  <h1>Posts Page</h1>
+    <PostList data={props.data}/>
   )
+}
+
+export async function getStaticProps() {
+  return{
+   props: {
+      data: data
+    },
+    revalidate: 3600
+  }
 }
 
 export default Posts

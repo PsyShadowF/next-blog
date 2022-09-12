@@ -1,14 +1,16 @@
 import Link from "next/link"
 
-function NavBar() {
+function NavBar({ children }) {
   return (
-    <nav className="NavBar">
-      <img className="logo" src="/gear-logo.svg" />
-      <ul className="list--ul">
-        <li className="list--li"><Link href='/posts'>Posts</Link></li>
-        <li className="list--li"><Link href='#'>Publicar</Link></li>
-      </ul>
-    </nav>
+    <>
+      <nav className="NavBar">
+        <img className="logo" src="/gear-logo.svg" />
+        <ul className="list--ul">
+          <li className="list--li"><Link href='/posts'>Posts</Link></li>
+        </ul>
+      </nav>
+      <main>{children}</main>
+    </>
   )
 }
 

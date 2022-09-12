@@ -1,0 +1,14 @@
+.master {
+  display: flex;
+  justify-content: center;
+}
+
+.slave {
+  padding-top: 2rem;
+}
+
+.image {
+  width: 450px;
+  height: auto;
+  border-radius: 5px;
+}
