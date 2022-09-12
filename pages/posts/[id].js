@@ -4,10 +4,10 @@ import PostItemDetails from "../../components/Posts/PostItemDetails.js"
 function PostDetails(props) {
   return (
     <PostItemDetails
-      key= {props.posts.id}
-      image= {props.posts.image}
-      title= {props.posts.title}
-      body= {props.posts.body}
+      key= {props.data.id}
+      image= {props.data.image}
+      title= {props.data.title}
+      body= {props.data.body}
     />
   )
 }
@@ -24,16 +24,11 @@ export function getStaticProps(context) {
 
   const pageId = context.params.id;
 
-  
+  const selectedPost = data.find(x => x.id === parseInt(pageId))
 
   return {
     props: {
-      posts: data.map(item => ({
-        id: item.id,
-        image: item.image,
-        title: item.title,
-        body: item.body
-      }))
+      data: selectedPost
     }
   }
 }
